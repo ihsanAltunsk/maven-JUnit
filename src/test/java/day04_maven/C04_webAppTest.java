@@ -9,17 +9,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C04_webAppTest {
-    //Go to http://zero.webappsecurity.com.
-    //Click on the Sign-in button.
-    //Enter "username" in the login field.
-    //Enter "password" in the password field.
-    //Click on the Sign in button.
-    //Go back to the page using the Back button.
-    //Navigate to the Pay Bills page from the Online Banking menu.
-    //Enter any amount you want to deposit in the "amount" section.
-    //Enter "2023-09-10" in the date section.
-    //Click on the Pay button.
-    //Test that the message "The payment was successfully submitted." appears.
+    // 1- Go to http://zero.webappsecurity.com.
+    // 2- Click on the Sign-in button.
+    // 3- Enter "username" in the login field.
+    // 4- Enter "password" in the password field.
+    // 5- Click on the Sign in button.
+    // 6- Go back to the page using the Back button.
+    // 7- Navigate to the Pay Bills page from the Online Banking menu.
+    // 8- Enter any amount you want to deposit in the "amount" section.
+    // 9- Enter "2023-09-10" in the date section.
+    // 10- Click on the Pay button.
+    // 11- Test that the message "The payment was successfully submitted." appears.
 
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
@@ -27,40 +27,40 @@ public class C04_webAppTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        //Go to http://zero.webappsecurity.com.
+        // 1- Go to http://zero.webappsecurity.com.
         driver.get("http://zero.webappsecurity.com");
 
-        //Click on the Sign-in button.
+        // 2- Click on the Sign-in button.
         driver.findElement(By.xpath("//button [@id='signin_button']")).click();
 
-        //Enter "username" in the login field.
+        // 3- Enter "username" in the login field.
         driver.findElement(By.xpath("//input [@id='user_login']")).sendKeys("username");
 
-        //Enter "password" in the password field.
+        // 4- Enter "password" in the password field.
         driver.findElement(By.xpath("//input [@id='user_password']")).sendKeys("password");
 
-        //Click on the Sign in button.
+        // 5- Click on the Sign in button.
         driver.findElement(By.xpath("//input [@name='submit']")).click();
 
-        //Go back to the page using the Back button.
+        // 6- Go back to the page using the Back button.
         driver.navigate().back();
 
-        //Navigate to the Pay Bills page from the Online Banking menu.
+        // 7- Navigate to the Pay Bills page from the Online Banking menu.
         driver.findElement(By.id("onlineBankingMenu")).click();
         driver.findElement(By.id("pay_bills_link")).click();
 
-        //Enter any amount you want to deposit in the "amount" section.
+        // 8- Enter any amount you want to deposit in the "amount" section.
         driver.findElement(By.id("sp_amount")).sendKeys("1000");
 
-        //Enter "2023-09-10" in the date section.
+        // 9- Enter "2023-09-10" in the date section.
         WebElement date = driver.findElement(By.id("sp_date"));
         date.sendKeys("2023-09-10");
         date.submit();
 
-        //Click on the Pay button.
+        // 10- Click on the Pay button.
         driver.findElement(By.xpath("//input [@class='btn btn-primary']")).click();
 
-        //Test that the message "The payment was successfully submitted." appears.
+        // 11- Test that the message "The payment was successfully submitted." appears.
         String actualMessage = driver.findElement(By.id("alert_content")).getText();
         String expectedMessage ="The payment was successfully submitted.";
 
