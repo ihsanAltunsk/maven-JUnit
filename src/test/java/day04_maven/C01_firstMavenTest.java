@@ -1,11 +1,11 @@
-package tests.day01_maven;
+package day04_maven;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C01_mavenFirstTest {
+public class C01_firstMavenTest {
     public static void main(String[] args) {
         // 1- Go to the homepage of testotomasyonu.com.
         // 2- Test that the URL contains 'testotomasyonu'.
