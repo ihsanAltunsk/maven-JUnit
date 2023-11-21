@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C06_beforeAfterAnnotation {
+public class C01_beforeAfterAnnotation {
     // 3 different test methods are created to perform the following tests:
     // 1- Go to the testotomasyonu.com site.
     // 2- Perform searches for phone, shoes, and dress.
@@ -45,9 +45,9 @@ public class C06_beforeAfterAnnotation {
 
         // 3- Test that products are found in the search results.
         WebElement searchElements = driver.findElement(By.className("product-count-text"));
-        String numberOfSearchStr= searchElements.getText().replaceAll("\\D","");
-        int numberOfSearch = Integer.parseInt(numberOfSearchStr);
-        if (numberOfSearch >90){
+        String numberOfResultsStr = searchElements.getText().replaceAll("\\D","");
+        int numberOfResults = Integer.parseInt(numberOfResultsStr);
+        if (numberOfResults >90){
             System.out.println("Phone test PASSED");
         }else{
             System.out.println("Phone test FAILED");
@@ -65,9 +65,9 @@ public class C06_beforeAfterAnnotation {
 
         // 3- Test that products are found in the search results.
         WebElement searchElements = driver.findElement(By.className("product-count-text"));
-        String numberOfSearchStr= searchElements.getText().replaceAll("\\D","");
-        int numberOfSearch = Integer.parseInt(numberOfSearchStr);
-        if (numberOfSearch >0){
+        String numberOfResultsStr = searchElements.getText().replaceAll("\\D","");
+        int numberOfResults = Integer.parseInt(numberOfResultsStr);
+        if (numberOfResults >0){
             System.out.println("Phone test PASSED");
         }else{
             System.out.println("Phone test FAILED");
@@ -85,9 +85,9 @@ public class C06_beforeAfterAnnotation {
 
         // 3- Test that products are found in the search results.
         WebElement searchElements = driver.findElement(By.className("product-count-text"));
-        String numberOfSearchStr= searchElements.getText().replaceAll("\\D","");
-        int numberOfSearch = Integer.parseInt(numberOfSearchStr);
-        if (numberOfSearch >0){
+        String numberOfResultsStr = searchElements.getText().replaceAll("\\D","");
+        int numberOfResults = Integer.parseInt(numberOfResultsStr);
+        if (numberOfResults >0){
             System.out.println("Phone test PASSED");
         }else{
             System.out.println("Phone test FAILED");
