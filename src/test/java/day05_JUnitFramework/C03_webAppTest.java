@@ -1,4 +1,4 @@
-package day04_maven;
+package day05_JUnitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C04_webAppTest {
+public class C03_webAppTest {
     // 1- Go to http://zero.webappsecurity.com.
     // 2- Click on the Sign-in button.
     // 3- Enter "username" in the login field.

@@ -1,4 +1,4 @@
-package day04_maven;
+package day05_JUnitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C05_googleSearchTest {
+public class C04_googleSearchTest {
     // 1- Go to https://www.google.com/.
     // 2- Accept and close the cookies notification.
     // 3- Test that the page title contains the expression "Google".

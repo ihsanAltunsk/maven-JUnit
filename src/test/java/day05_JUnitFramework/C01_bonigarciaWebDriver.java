@@ -1,4 +1,4 @@
-package day04_maven;
+package day05_JUnitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C02_JUnitFramework {
+public class C01_bonigarciaWebDriver {
     public static void main(String[] args) throws InterruptedException {
 
         /* Before starting the test operations in a class,

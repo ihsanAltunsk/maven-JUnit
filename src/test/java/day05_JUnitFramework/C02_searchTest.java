@@ -1,4 +1,4 @@
-package day04_maven;
+package day05_JUnitFramework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C03_searchTest {
+public class C02_searchTest {
 
     // 1- Let's go to the homepage of testotomasyonu.com.
     // 2- Let's locate the search box.
