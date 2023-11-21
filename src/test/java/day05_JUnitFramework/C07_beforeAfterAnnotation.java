@@ -37,6 +37,7 @@ public class C07_beforeAfterAnnotation {
             System.out.println("Google url test PASSED");
         }else {
             System.out.println("Google url test FAILED");
+            System.out.println("url: " + driver.getCurrentUrl());
            throw new AssertionFailedError();
         }
     }
@@ -46,11 +47,12 @@ public class C07_beforeAfterAnnotation {
         driver.get("https://testotomasyonu.com");
 
         //test if the title contains "Test Otomasyon"
-        if (driver.getTitle().contains("Test Otomasyonu")){
+        if (driver.getTitle().contains("Youtube")){
             System.out.println("Title test PASSED");
         }else {
             System.out.println("Title test FAILED");
             System.out.println("Title: " + driver.getTitle() );
+            throw new AssertionFailedError();
         }
     }
     @Test
@@ -64,6 +66,7 @@ public class C07_beforeAfterAnnotation {
         }else {
             System.out.println("Wise title test FAILED");
             System.out.println("Wise title: " + driver.getTitle() );
+            throw new AssertionFailedError();
         }
     }
 }
