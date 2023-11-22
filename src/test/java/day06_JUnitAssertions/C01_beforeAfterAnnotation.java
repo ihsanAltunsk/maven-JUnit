@@ -1,4 +1,4 @@
-package day_06JUnitAssertions;
+package day06_JUnitAssertions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.AssertionFailedError;

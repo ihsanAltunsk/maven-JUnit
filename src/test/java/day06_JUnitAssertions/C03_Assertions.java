@@ -1,4 +1,4 @@
-package day_06JUnitAssertions;
+package day06_JUnitAssertions;
 
 import org.junit.Assert;
 import org.junit.Test;
