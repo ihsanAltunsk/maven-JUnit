@@ -1,10 +1,7 @@
 package day07_testBaseClass_Dropdown;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,9 +17,10 @@ public class C01_radioButton {
     //    either through text or directly from the button.
     // d. Test that the radio button you selected is selected, and the others are not selected.
 
-    static WebDriver driver;
-    @BeforeClass
-    public static void setup(){
+    WebDriver driver;
+
+    @Before
+    public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -31,8 +29,8 @@ public class C01_radioButton {
         // a. Go to the given web page https://testotomasyonu.com/form
         driver.get("https://testotomasyonu.com/form");
     }
-    @AfterClass
-    public static void teardown(){
+    @After
+    public void teardown(){
         driver.quit();
     }
 
