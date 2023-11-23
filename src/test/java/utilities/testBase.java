@@ -12,17 +12,17 @@ public class testBase {
 
     protected WebDriver driver;
     @Before
-    protected void setup(){
+    public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 
         // a. Go to the given web page https://testotomasyonu.com/form
         driver.get("https://testotomasyonu.com/form");
     }
     @After
-    protected void teardown(){
+    public void teardown(){
         driver.quit();
     }
 }
