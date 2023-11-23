@@ -72,12 +72,6 @@ public class C04_dropDownMenu extends testBase {
         String actualMessage = driver.findElement(By.id("alert_content")).getText();
 
         Assert.assertEquals(expectedMessage,actualMessage);
-
-
-
-
-
-
     }
 }
 
