@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WindowType;
 import utilities.testBase;
 
-public class C04_ extends testBase {
+public class C04_controlledWindow extends testBase {
     // 1- Go to the Testotomasyonu homepage.
     // 2- Test that the URL contains 'testotomasyonu'.
     // 3- Open the 'Electronics' link in a new tab.
