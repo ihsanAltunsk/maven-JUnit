@@ -13,7 +13,6 @@ public class C01_basicAuthentication extends testBase {
     //  -Username: membername
     //  -Password: sunflower
     // 3- Verify that access to the page is successful.
-
     @Test
     public void test01(){
         // 2- Perform authentication using the following method and test data:
@@ -26,7 +25,6 @@ public class C01_basicAuthentication extends testBase {
         WebElement successfulElement = driver.findElement(By.tagName("h3"));
         String expectedSuccesful = "Congratulations! You are logged in as: membername";
         String actualSuccessful = successfulElement.getText();
-
         Assert.assertEquals(expectedSuccesful, actualSuccessful);
     }
 }
