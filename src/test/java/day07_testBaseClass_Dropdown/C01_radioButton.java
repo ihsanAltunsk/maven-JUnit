@@ -64,7 +64,5 @@ public class C01_radioButton {
         Assert.assertTrue(man.isSelected());
         Assert.assertFalse(woman.isSelected());
         Assert.assertFalse(other.isSelected());
-
-
     }
 }
