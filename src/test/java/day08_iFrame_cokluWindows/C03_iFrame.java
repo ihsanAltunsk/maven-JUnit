@@ -14,14 +14,14 @@ public class C03_iFrame extends testBase {
     // 4- Click on the play button in the first iframe (Youtube).
     // 5- Exit the first iframe and return to the homepage.
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
         /// 1- Go to http://demo.guru99.com/test/guru99home/.
         driver.get("http://demo.guru99.com/test/guru99home/");
 
         // 2- Accept the cookies.
-        WebElement cookiesIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
-        driver.switchTo().frame(cookiesIFrame);
-        driver.findElement(By.xpath("//*[text()='Accept All']")).click();
+        //WebElement cookiesIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
+        //driver.switchTo().frame(cookiesIFrame);
+        //driver.findElement(By.xpath("//*[text()='Accept All']")).click();
 
         // 3- Find the number of iframes on the page.
         List<WebElement> iFrameList = driver.findElements(By.tagName("iframe"));

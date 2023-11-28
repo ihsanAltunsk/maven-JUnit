@@ -18,41 +18,71 @@ public class C04_controlledWindow extends testBase {
 
     @Test
     public void controlledWindowTest(){
-        // 1- Go to the Testotomasyonu homepage.
-        driver.get("https://testotomasyonu.com");
+        // Testotomasyonu anasayfaya gidin
 
-        // 2- Test that the URL contains 'testotomasyonu'.
-        String expectedURL ="testotomasyonu";
-        String actualURL= driver.getCurrentUrl();
-        Assert.assertTrue(actualURL.contains(expectedURL));
-        String mainWHD = driver.getWindowHandle();
+        driver.get("https://www.testotomasyonu.com");
+        // url'in testotomasyonu icerdigini test edin
 
-        // 3- Open the 'Electronics' link in a new tab.
-        driver.switchTo().newWindow(WindowType.TAB).get("https://testotomasyonu.com");
-        driver.findElement(By.linkText("Electronics")).click();
+        String expectedUrlIcerik = "testotomasyonu";
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(expectedUrlIcerik));
+        String anasayfaWHD = driver.getWindowHandle();
+        // yeni bir tab olarak elctronics linkini acin
+
+        driver.switchTo().newWindow(WindowType.TAB).get("https://www.testotomasyonu.com");
+        driver.findElement(By.xpath("(//a[text()='Electronics'])[3]")).click();
         String electronicsWHD = driver.getWindowHandle();
 
-        // 4- Test that the opened page is the Electronics page.
-        String expectedTitle = "Electronics";
+        // acilan sayfanin electronics sayfasi oldugunu test edin
+        // Title'da Electronics oldugunu test edelim
+        String expectedTitleIcerik = "Electronics";
         String actualTitle = driver.getTitle();
-        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
-        // 5- Click on the 'Men's Fashion' link to open it in a new window.
+        Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
+        // yeni bir window'da acilacak sekilde menfashion linkini tiklayin
+
         driver.switchTo().newWindow(WindowType.WINDOW).get("https://www.testotomasyonu.com");
         driver.findElement(By.xpath("(//a[text()='Men Fashion'])[3]")).click();
         String menFashionWHD = driver.getWindowHandle();
 
-        /// 6- Test that the Men's Fashion page is opened.
-        expectedTitle = "Men Fashion";
+        // menfashion sayfasinin acildigini test edin
+        expectedTitleIcerik = "Men Fashion";
         actualTitle = driver.getTitle();
-        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
-        // 7- Return to the initially opened page.
-        driver.switchTo().window(mainWHD);
+        Assert.assertFalse(actualTitle.contains(expectedTitleIcerik));
+        // ilk actigimiz sayfaya donun
+        driver.switchTo().window(anasayfaWHD);
 
-        // 8- Test that we are back on the Testotomasyonu homepage.
+        // EGER bir test'de acilan windowlar farkli tab veya window'larda aciliyorsa
+        // ve testimizde bu sayfalar arasinda gecis isteniyorsa
+        // gectigimiz her sayfanin WindowHandleDegerini kaydetmeliyiz
+
+        // test otomasyon anasayfada oldugumuzu test edin
+        // url ile test edelim https://testotomasyonu.com/
+
         String expectedUrl = "https://www.testotomasyonu.com/";
-        actualURL = driver.getCurrentUrl();
-        Assert.assertEquals(expectedUrl,actualURL);
+        actualUrl = driver.getCurrentUrl();
+
+        Assert.assertEquals(expectedUrl,actualUrl);
+
+        // tekrar electronics acik olan tab'a gecin
+        driver.switchTo().window(electronicsWHD);
+        // electronics bolumunde oldugunuzu test edin
+
+        expectedTitleIcerik = "Electronics";
+        actualTitle = driver.getTitle();
+        Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
+
+        // tekrar men fashion acik olan tab'a gecin
+        driver.switchTo().window(menFashionWHD);
+
+
+        // men fashion bolumunde oldugunuzu test edin
+        expectedTitleIcerik = "Men Fashion";
+        actualTitle = driver.getTitle();
+
+        Assert.assertTrue(actualTitle.contains(expectedTitleIcerik));
+
+
     }
 }
