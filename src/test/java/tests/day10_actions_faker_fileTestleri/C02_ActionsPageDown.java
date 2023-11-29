@@ -24,6 +24,7 @@ public class C02_ActionsPageDown extends testBase {
         // 2- Scroll down enough to see the video
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+        waitabit(4);
 
         // 3- Press the Play button to watch the video
         WebElement iframeElement = driver.findElement(By.xpath("//iframe[1]"));

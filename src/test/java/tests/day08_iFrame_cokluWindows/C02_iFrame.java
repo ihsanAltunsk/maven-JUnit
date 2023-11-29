@@ -36,5 +36,6 @@ public class C02_iFrame extends testBase {
         WebElement elementalSeleniumElementi = driver.findElement(By.xpath("//*[text()='Elemental Selenium']"));
         Assert.assertTrue(elementalSeleniumElementi.isDisplayed());
         System.out.println(elementalSeleniumElementi.getText());
+
     }
 }

@@ -30,5 +30,6 @@ public class C01_Actions extends testBase {
 
         //4- Accept the alert by clicking "OK" to close it.
         driver.switchTo().alert().accept();
+
     }
 }

@@ -20,6 +20,5 @@ public class testBase {
     }
     @After
     public void teardown(){
-        driver.quit();
     }
 }
