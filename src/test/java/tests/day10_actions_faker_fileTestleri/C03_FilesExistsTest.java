@@ -8,7 +8,7 @@ import utilities.testBase;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C03_filesExistsTest extends testBase {
+public class C03_FilesExistsTest extends testBase {
     // 1. Go to https://the-internet.herokuapp.com/download
     // 2. Download the Logo.png file
     // 3. Test whether the file has been successfully downloaded or not.

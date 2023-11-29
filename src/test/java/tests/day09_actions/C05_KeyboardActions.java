@@ -10,7 +10,7 @@ import utilities.testBase;
 
 import static utilities.reusableMethods.waitabit;
 
-public class C05_keyboardActions extends testBase {
+public class C05_KeyboardActions extends testBase {
     //2- Go to https://www.testotomasyonu.com
     //3- In the search box, use actions methods to type "DELL Core 13" and press Enter to perform the search
     //4- Test that the product name contains "DELL Core 13" in the search results.

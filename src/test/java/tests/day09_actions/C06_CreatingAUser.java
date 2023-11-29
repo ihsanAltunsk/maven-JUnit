@@ -10,7 +10,7 @@ import utilities.testBase;
 
 import static utilities.reusableMethods.waitabit;
 
-public class C06_creatingAUser extends testBase {
+public class C06_CreatingAUser extends testBase {
     // 1- Go to https://www.testotomasyonu.com
     // 2- Click on the "Account" link
     // 3- Click on the "Sign Up" link

@@ -10,7 +10,7 @@ import utilities.testBase;
 import static utilities.reusableMethods.changePageWithTitle;
 import static utilities.reusableMethods.waitabit;
 
-public class C02_actions extends testBase {
+public class C02_Actions extends testBase {
     // 1- Go to https://the-internet.herokuapp.com/context_menu
     // 2- Right-click on the designated area
     // 3- Test that the text in the alert is "You selected a context menu."

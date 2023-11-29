@@ -7,7 +7,7 @@ import utilities.testBase;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C06_testingTheFileOnTheComputer extends testBase {
+public class C06_TestingTheFileOnTheComputer extends testBase {
     // Test whether eva-logo.png exists in Downloads.
 
     @Test

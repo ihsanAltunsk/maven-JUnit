@@ -8,11 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.testBase;
 
-import java.security.Key;
-
-import static utilities.reusableMethods.waitabit;
-
-public class C01_facebookUserCreation extends testBase {
+public class C01_FacebookUserCreation extends testBase {
     // 1- Go to https://www.facebook.com
     // 2- Accept cookies
     // 3- Click on the "Create New Account" button

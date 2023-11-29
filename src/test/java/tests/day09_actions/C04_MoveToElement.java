@@ -9,7 +9,7 @@ import utilities.testBase;
 
 import static utilities.reusableMethods.waitabit;
 
-public class C04_moveToElement extends testBase {
+public class C04_MoveToElement extends testBase {
     // 1- Go to https://www.testotomasyonu.com/
     // 2- Hover the mouse over the "Kids Wear" menu to open it
     // 3- Click on the "Boys" link
