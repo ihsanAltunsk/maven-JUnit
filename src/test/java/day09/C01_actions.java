@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.testBase;
 
-public class C01_Actions extends testBase {
+public class C01_actions extends testBase {
     //1- Go to https://testotomasyonu.com/click
     //2- Right-click on "DGI Drones"
     //3- Test that the text in the alert is "Congratulations!... You performed a right click."
     //4- Accept the alert by clicking "OK" to close it.
 
-@Test
+    @Test
     public void test01() throws InterruptedException {
         //1- Go to https://testotomasyonu.com/click
         driver.get("https://testotomasyonu.com/click");
