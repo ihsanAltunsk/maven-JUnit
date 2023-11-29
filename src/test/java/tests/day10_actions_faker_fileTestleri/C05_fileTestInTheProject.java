@@ -19,7 +19,7 @@ public class C05_fileTestInTheProject extends testBase {
             // The part that is unique to each person ==> user.dir
             //          C:\Users/user\IdeaProjects\com.team127_JUnit
             // The part that is the same for everyone ==> the file path inside the project
-            //          \src\test\java\tests\day10_actions_faker_fileTestleri\experiment.txt;
+            //          \src\test\java\tests\day10_actions_faker_fileTestleri\experiment.txt
 
         String dynamicFilePath = System.getProperty("user.dir") +
                 "\\src\\test\\java\\tests\\day10_actions_faker_fileTestleri\\experiment.txt";
