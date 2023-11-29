@@ -4,11 +4,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
 import java.util.Set;
 
-public class C05_uncontrolledWindow extends testBase {
+public class C05_uncontrolledWindow extends TestBase {
     // 1- Go to https://testotomasyonu.com/addremove/.
     // 2- Verify that the text on the page is "Add/Remove Elements".
     // 3- Verify that the page title is "Test Otomasyonu".

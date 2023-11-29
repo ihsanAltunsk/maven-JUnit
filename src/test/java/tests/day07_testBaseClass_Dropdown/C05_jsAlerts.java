@@ -1,12 +1,11 @@
 package tests.day07_testBaseClass_Dropdown;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C05_jsAlerts extends testBase {
+public class C05_jsAlerts extends TestBase {
     // Test - 1
     // 1- Go to https://testotomasyonu.com/javascriptAlert
     // 2- Click on the first alert

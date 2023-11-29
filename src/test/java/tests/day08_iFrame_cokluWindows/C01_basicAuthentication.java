@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C01_basicAuthentication extends testBase {
+public class C01_basicAuthentication extends TestBase {
     // 1- Go to https://testotomasyonu.com/basicauth
     // 2- Perform authentication using the following method and test data:
     //  -HTML command: https://username:password@URL

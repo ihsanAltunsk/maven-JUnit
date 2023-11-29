@@ -5,9 +5,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C01_Actions extends testBase {
+public class C01_Actions extends TestBase {
     //1- Go to https://testotomasyonu.com/click
     //2- Right-click on "DGI Drones"
     //3- Test that the text in the alert is "Congratulations!... You performed a right click."

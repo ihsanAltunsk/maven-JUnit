@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class reusableMethods {
+public class ReusableMethods {
 
     public static List<String> convertToString(List<WebElement> elementsList){
 

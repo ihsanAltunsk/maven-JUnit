@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.waitabit;
 
-public class C05_KeyboardActions extends testBase {
+public class C05_KeyboardActions extends TestBase {
     //2- Go to https://www.testotomasyonu.com
     //3- In the search box, use actions methods to type "DELL Core 13" and press Enter to perform the search
     //4- Test that the product name contains "DELL Core 13" in the search results.

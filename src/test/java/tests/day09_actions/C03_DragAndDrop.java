@@ -5,11 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.waitabit;
 
-public class C03_DragAndDrop extends testBase {
+public class C03_DragAndDrop extends TestBase {
     // 1- Go to https://testotomasyonu.com/droppable
     // 2- In the "Accept" section, drag the "Acceptable" button and drop it onto the "Drop here" box
     // 3- Test that the text is now "Dropped!" instead of "Drop here"

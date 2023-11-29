@@ -3,12 +3,12 @@ package tests.day10_actions_faker_fileTestleri;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import utilities.testBase;
+import utilities.TestBase;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C03_FilesExistsTest extends testBase {
+public class C03_FilesExistsTest extends TestBase {
     // 1. Go to https://the-internet.herokuapp.com/download
     // 2. Download the Logo.png file
     // 3. Test whether the file has been successfully downloaded or not.

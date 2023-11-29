@@ -2,12 +2,12 @@ package tests.day10_actions_faker_fileTestleri;
 
 import org.junit.Assert;
 import org.junit.Test;
-import utilities.testBase;
+import utilities.TestBase;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C06_TestingTheFileOnTheComputer extends testBase {
+public class C06_TestingTheFileOnTheComputer extends TestBase {
     // Test whether eva-logo.png exists in Downloads.
 
     @Test
@@ -24,6 +24,5 @@ public class C06_TestingTheFileOnTheComputer extends testBase {
         String dynamicFilePath = System.getProperty("user.home") +
                 "/Downloads/eva-logo.png";
         Assert.assertTrue(Files.exists(Paths.get(dynamicFilePath)));
-
     }
 }

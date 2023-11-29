@@ -5,12 +5,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import utilities.reusableMethods;
-import utilities.testBase;
+import utilities.ReusableMethods;
+import utilities.TestBase;
 
 import java.util.List;
 
-public class C03_dropDownMenu extends testBase {
+public class C03_dropDownMenu extends TestBase {
     // Go to https://testotomasyonu.com/form.
     // 1. Choose 5 from the day options of the birth date using index.
     // 2. Select April from the month options of the birth date using value.
@@ -46,7 +46,7 @@ public class C03_dropDownMenu extends testBase {
 
         // 5. Print all values (value) in the month dropdown menu.
         List<WebElement> monthElements = selectMonth.getOptions();
-        System.out.println(reusableMethods.convertToString(monthElements));
+        System.out.println(ReusableMethods.convertToString(monthElements));
 
         // 6. Test that the size of the Month Dropdown menu is 30.
         Assert.assertEquals(13,monthElements.size());

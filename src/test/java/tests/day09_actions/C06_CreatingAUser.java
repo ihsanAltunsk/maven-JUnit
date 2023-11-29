@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.waitabit;
 
-public class C06_CreatingAUser extends testBase {
+public class C06_CreatingAUser extends TestBase {
     // 1- Go to https://www.testotomasyonu.com
     // 2- Click on the "Account" link
     // 3- Click on the "Sign Up" link

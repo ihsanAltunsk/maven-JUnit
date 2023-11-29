@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.waitabit;
 
-public class C02_ActionsPageDown extends testBase {
+public class C02_ActionsPageDown extends TestBase {
     // 1- Go to https://html.com/tags/iframe/
     // 2- Scroll down enough to see the video
     // 3- Press the Play button to watch the video

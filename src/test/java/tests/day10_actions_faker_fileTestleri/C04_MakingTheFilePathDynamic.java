@@ -1,9 +1,9 @@
 package tests.day10_actions_faker_fileTestleri;
 
 import org.junit.Test;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C04_MakingTheFilePathDynamic extends testBase {
+public class C04_MakingTheFilePathDynamic extends TestBase {
 
     /*
         To make the Java file path dynamic, we have two ready methods to access two fundamental locations:

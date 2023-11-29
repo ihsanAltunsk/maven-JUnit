@@ -3,11 +3,11 @@ package tests.day08_iFrame_cokluWindows;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
 import java.util.List;
 
-public class C03_iFrame extends testBase {
+public class C03_iFrame extends TestBase {
     // 1- Go to http://demo.guru99.com/test/guru99home/.
     // 2- Accept the cookies.
     // 3- Find the number of iframes on the page.

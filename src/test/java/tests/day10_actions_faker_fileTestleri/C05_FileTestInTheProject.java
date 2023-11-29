@@ -2,12 +2,12 @@ package tests.day10_actions_faker_fileTestleri;
 
 import org.junit.Assert;
 import org.junit.Test;
-import utilities.testBase;
+import utilities.TestBase;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class C05_FileTestInTheProject extends testBase {
+public class C05_FileTestInTheProject extends TestBase {
     // Test whether there is a deneme.txt file under the day10 package in our project.
 
     @Test

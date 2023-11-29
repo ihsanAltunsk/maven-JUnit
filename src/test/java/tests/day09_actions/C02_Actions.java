@@ -5,12 +5,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.changePageWithTitle;
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.changePageWithTitle;
+import static utilities.ReusableMethods.waitabit;
 
-public class C02_Actions extends testBase {
+public class C02_Actions extends TestBase {
     // 1- Go to https://the-internet.herokuapp.com/context_menu
     // 2- Right-click on the designated area
     // 3- Test that the text in the alert is "You selected a context menu."

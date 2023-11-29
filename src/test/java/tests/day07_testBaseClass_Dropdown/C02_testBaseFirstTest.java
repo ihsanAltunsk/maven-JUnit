@@ -5,9 +5,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C02_testBaseFirstTest extends testBase {
+public class C02_testBaseFirstTest extends TestBase {
 
     @Test
     public void test01(){

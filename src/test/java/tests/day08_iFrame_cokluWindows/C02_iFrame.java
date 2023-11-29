@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C02_iFrame extends testBase {
+public class C02_iFrame extends TestBase {
     // 1- Go to https://the-internet.herokuapp.com/iframe.
     // 2- Create a method: iframeTest
     // 3- Test if the text "An IFrame containing…." is accessible and print it to the console.

@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C01_FacebookUserCreation extends testBase {
+public class C01_FacebookUserCreation extends TestBase {
     // 1- Go to https://www.facebook.com
     // 2- Accept cookies
     // 3- Click on the "Create New Account" button

@@ -5,9 +5,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C04_dropDownMenu extends testBase {
+public class C04_dropDownMenu extends TestBase {
     // 1- Go to http://zero.webappsecurity.com/.
     // 2- Click on the Sign in button.
     // 3- Enter "username" in the Login box.

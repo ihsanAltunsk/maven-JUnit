@@ -4,9 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utilities.testBase;
+import utilities.TestBase;
 
-public class C07_FileUpload extends testBase {
+public class C07_FileUpload extends TestBase {
     // 1- Let's go to https://the-internet.herokuapp.com/upload
     // 2- Click on the chooseFile button
     // 3- Choose the file you want to upload.

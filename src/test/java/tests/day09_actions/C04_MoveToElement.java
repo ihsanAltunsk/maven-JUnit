@@ -5,11 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import utilities.testBase;
+import utilities.TestBase;
 
-import static utilities.reusableMethods.waitabit;
+import static utilities.ReusableMethods.waitabit;
 
-public class C04_MoveToElement extends testBase {
+public class C04_MoveToElement extends TestBase {
     // 1- Go to https://www.testotomasyonu.com/
     // 2- Hover the mouse over the "Kids Wear" menu to open it
     // 3- Click on the "Boys" link
