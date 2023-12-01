@@ -25,7 +25,7 @@ public class C04_WebTables extends TestBase {
 
     @Test
     public void webTabletest() {
-        /*
+/*
             In classic HTML codes used to create web tables, to access the data in the desired cell,
             we use only tags with the table/body/row/data hierarchy.
             1- If we can access the information for 1 of 1, we don't need to write the entire path.
