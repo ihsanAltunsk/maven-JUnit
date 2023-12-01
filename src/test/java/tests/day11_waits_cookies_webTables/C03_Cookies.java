@@ -19,7 +19,7 @@ public class C03_Cookies extends TestBase {
     // 8- Delete all cookies and test that they have been deleted.
 
     @Test
-    public void test(){
+    public void test01(){
         // 1- Go to the Amazon homepage.
         driver.get("https://www.amazon.com.tr");
 
