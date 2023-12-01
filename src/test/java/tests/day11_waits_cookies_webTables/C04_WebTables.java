@@ -9,7 +9,7 @@ import utilities.TestBase;
 
 import java.util.List;
 
-public class C04 extends TestBase {
+public class C04_WebTables extends TestBase {
 
     // 1- Go to "https://testotomasyonu.com/webtables"
     // 2- Print the entire body of the web table
