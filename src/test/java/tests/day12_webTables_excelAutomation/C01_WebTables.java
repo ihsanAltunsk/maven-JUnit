@@ -49,7 +49,10 @@ public class C01_WebTables extends TestBase {
         System.out.println("Number of columns in the table: " + headerElements.size());
 
         // 8- Print the 3rd column in the table
+        List<WebElement> thirdColumnElements = driver.findElements(By.xpath("//*[@role='trow']/*[@role='tdata'][3]"));
+        List<String > thirdColumnElementsStr = ReusableMethods.stringListeDonustur(thirdColumnElements);
 
+        System.out.println("3rd Column : " + thirdColumnElementsStr);
 
         // 9- Print the price of the product with "Category" as Furniture in the table
         // 10- Create a method that, when provided with the row and column numbers on the Test page, prints the corresponding data
