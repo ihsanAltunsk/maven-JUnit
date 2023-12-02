@@ -54,8 +54,24 @@ public class C01_WebTables extends TestBase {
         System.out.println("3rd Column : " + thirdColumnElementsStr);
 
         // 9- Print the price of the product with "Category" as Furniture in the table
+        System.out.println(thirdColumnElementsStr.get(2));
+                                                    // OR
+        String rowCategoryXpath ="";
+        String rowPriceXpath = "";
+        for (int i = 1; i <= rowElements.size() ; i++) {
+            rowCategoryXpath = "((//*[@role='trow'])[" + i + "]/*[@role='tdata'])[2]";
+            rowPriceXpath = "((//*[@role='trow'])[" + i + "]/*[@role='tdata'])[3]";
+            if (driver.findElement(By.xpath(rowCategoryXpath)).getText().equals("Furniture")){
+                System.out.println("Wanted product price : " +
+                        driver.findElement(By.xpath(rowPriceXpath)).getText());
+            }
+        }
 
         // 10- Create a method that, when provided with the row and column numbers on the Test page, prints the corresponding data
+        wantedData(2,4);
     }
-
+    public void wantedData(int rowNo, int columnNo){
+        String path = "((//*[@role='trow'])[" + rowNo + "]/*[@role='tdata'])[" + columnNo + "]";
+        System.out.println("Wanted data : " + driver.findElement(By.xpath(path)).getText());
+    }
 }
