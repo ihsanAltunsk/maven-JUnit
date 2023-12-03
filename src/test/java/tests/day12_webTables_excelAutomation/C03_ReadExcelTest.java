@@ -46,8 +46,9 @@ public class C03_ReadExcelTest {
         // 5- Test if the capital city of Samoa is named Apia.
         String expectedCapital = "Apia";
         String actualCapital="";
-        for (int i =0;i<numberOfRows; i++){
-            if (page1.getRow(i).getCell(0).equals("Samoa")){
+        for (int i = 0 ; i <= numberOfRows ; i++){
+            String country = page1.getRow(i).getCell(0).toString();
+            if (country.equals("Samoa")){
                 actualCapital = page1.getRow(i).getCell(1).toString();
             }
         }
@@ -55,9 +56,10 @@ public class C03_ReadExcelTest {
 
         // 6- Create a method that, based on the English country name
         //    and language preference we provide, returns the capital city.
-        System.out.println(findCapital("fransa"));
-        // 7- Find the number of physically used rows.
+        System.out.println(findCapital("france","turkish"));
 
+        // 7- Find the number of physically used rows.
+        System.out.println("Number of physically used rows: " + page1.getPhysicalNumberOfRows());
 
         // 8- Save English country names and their capitals as a map.
 
@@ -69,7 +71,7 @@ public class C03_ReadExcelTest {
         for (int i = 0; i <= page1.getLastRowNum() ; i++) {
             countryNameOnRow = page1.getRow(i).getCell(0).toString();
             if (countryNameOnRow.equalsIgnoreCase(countryName)){
-                if (language.equalsIgnoreCase("English")){ // ingilizce baskent
+                if (language.equalsIgnoreCase("English")){
                     capitalName = page1.getRow(i).getCell(1).toString();
                 }else{
                     capitalName = page1.getRow(i).getCell(3).toString();
