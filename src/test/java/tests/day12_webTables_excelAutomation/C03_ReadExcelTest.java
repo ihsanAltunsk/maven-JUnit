@@ -1,5 +1,6 @@
 package tests.day12_webTables_excelAutomation;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -8,6 +9,8 @@ import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class C03_ReadExcelTest {
     // 1- Let's go to the 2nd cell in the 1st row and print its content.
@@ -56,8 +59,8 @@ public class C03_ReadExcelTest {
 
         // 6- Create a method that, based on the English country name
         //    and language preference we provide, returns the capital city.
-        System.out.println(findCapital("france","turkish"));
-
+        System.out.println(findCapital("azerbaycan","turkish"));
+        System.out.println(findCapital("Azerbaijan","english"));
         // 7- Find the number of physically used rows.
         System.out.println("Number of physically used rows: " + page1.getPhysicalNumberOfRows());
 
@@ -66,11 +69,13 @@ public class C03_ReadExcelTest {
 
     }
     public String findCapital (String countryName, String language){
-        String countryNameOnRow;
+        String countryNameOnRow,countryNameOnRow2;
         String capitalName ="";
+
         for (int i = 0; i <= page1.getLastRowNum() ; i++) {
             countryNameOnRow = page1.getRow(i).getCell(0).toString();
-            if (countryNameOnRow.equalsIgnoreCase(countryName)){
+            countryNameOnRow2 = page1.getRow(i).getCell(2).toString();
+            if (countryNameOnRow.equalsIgnoreCase(countryName) || countryNameOnRow2.equalsIgnoreCase(countryName)){
                 if (language.equalsIgnoreCase("English")){
                     capitalName = page1.getRow(i).getCell(1).toString();
                 }else{
