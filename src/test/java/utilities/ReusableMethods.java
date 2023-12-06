@@ -1,8 +1,13 @@
 package utilities;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -49,6 +54,23 @@ public class ReusableMethods {
         }
         return null; // We know that this line will not execute
                      // It is written solely to address Java's concerns.
+    }
+
+    public static void getScreenshot(WebDriver driver) {
+        TakesScreenshot tss = (TakesScreenshot) driver;
+
+        // Step 2: Create a File with the file path where we will save the photo.
+        File AllPageScreenshot = new File("target/Screenshots/AllPageScreenshots.jpg");
+
+        // Step 3: Use the tss object to take a photo and save it to a temporary file.
+        File temporaryFile = tss.getScreenshotAs(OutputType.FILE);
+
+        // Step 4: Copy the temporary file to the actual file.
+        try {
+            FileUtils.copyFile(temporaryFile,AllPageScreenshot);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
