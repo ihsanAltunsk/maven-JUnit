@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.DateTimeException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -57,10 +60,20 @@ public class ReusableMethods {
     }
 
     public static void getScreenshot(WebDriver driver) {
+        // Capture and save a screenshot of the entire page.
+        // Step 1: Create a TakesScreenshot (tss) object.
         TakesScreenshot tss = (TakesScreenshot) driver;
 
         // Step 2: Create a File with the file path where we will save the photo.
-        File AllPageScreenshot = new File("target/Screenshots/AllPageScreenshots.jpg");
+        // To ensure that each newly saved image does not overwrite the previous one,
+        // we can make the file path dynamic by adding a timestamp label.
+        // Let's add a timestamp label to the file path to make it dynamic.
+        LocalDateTime localDateTime = LocalDateTime.now();
+        DateTimeFormatter expectedFormat = DateTimeFormatter.ofPattern("yyMMddHHmmss");
+        String dynamicPath = "target/Screenshots/AllPageScreenshots" +
+                              localDateTime.format(expectedFormat) +
+                              ".jpg";
+        File AllPageScreenshot = new File(dynamicPath);
 
         // Step 3: Use the tss object to take a photo and save it to a temporary file.
         File temporaryFile = tss.getScreenshotAs(OutputType.FILE);
