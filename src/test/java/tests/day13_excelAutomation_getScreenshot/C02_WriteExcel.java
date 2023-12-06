@@ -24,7 +24,7 @@ public class C02_WriteExcel {
         String path = "src/test/java/tests/day12_webTables_excelAutomation/ulkeler.xlsx";
         FileInputStream fileInputStream = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fileInputStream);
-        Sheet page1 = workbook.getSheet("Sayfa");
+        Sheet page1 = workbook.getSheet("Sayfa1");
 
         // 1- Create a new cell in the 5th column.
         page1.getRow(0).createCell(4);
@@ -33,20 +33,22 @@ public class C02_WriteExcel {
         page1.getRow(0).getCell(4).setCellValue("Population");
 
         // 3- In the 2nd row, write 1500000 in the population column.
-        page1.getRow(1).getCell(4).setCellValue("1500000");
+        page1.getRow(1).createCell(4).setCellValue(1500000);
 
         // 4- In the 10th row, write 250000 in the population column.
-        page1.getRow(9).getCell(4).setCellValue("250000");
+        page1.getRow(9).createCell(4).setCellValue(250000);
 
         // 5- In the 15th row, write 54000 in the population column.
-        page1.getRow(14).getCell(4).setCellValue("54000");
+        page1.getRow(14).createCell(4).setCellValue(54000);
 
         // 6- Save the file.
         FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);
 
-
         // 7- Close the file.
+        fileInputStream.close();
+        fileOutputStream.close();
+        workbook.close();
 
     }
 }
