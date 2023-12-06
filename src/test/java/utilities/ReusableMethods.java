@@ -86,5 +86,22 @@ public class ReusableMethods {
         }
     }
 
+    public static void wantedWebElementScreenshot(WebElement resultElement){
+        // Step 1: Locate the WebElement from which we will take the screenshot.
+        // Step 2: Create the file where we will save the screenshot.
+        File wantedWebElement = new File("target/Screenshots/wantedWebElement.jpg");
+
+        // Step 3: Capture a screenshot from the WebElement and save it to a temporary file.
+        File temporaryFile = resultElement.getScreenshotAs(OutputType.FILE);
+
+        // Step 4: Copy the temporary file to the actual file.
+        try {
+            FileUtils.copyFile(temporaryFile,wantedWebElement);
+        } catch (IOException e) {
+            System.out.println("Screenshot could not be copied.");
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
