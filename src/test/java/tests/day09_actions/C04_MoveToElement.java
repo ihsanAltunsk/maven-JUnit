@@ -22,6 +22,7 @@ public class C04_MoveToElement extends TestBase {
         // 1- Go to https://www.testotomasyonu.com/
         driver.get("https://www.testotomasyonu.com/");
         waitabit(1);
+
         // 2- Hover the mouse over the "Kids Wear" menu to open it
         Actions actions = new Actions(driver);
         WebElement kidsWearElement = driver.findElement(By.xpath("(//*[@class='has-sub'])[7]"));
